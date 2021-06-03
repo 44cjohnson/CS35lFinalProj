@@ -1,6 +1,7 @@
 .workoutCards {
     /* background-color: black; */
     flex: 1;
+    
     /* overflow-y: scroll;
     height: 600px; */
 }
@@ -8,4 +9,5 @@
 .card{
     background-color: #505050 ;
     margin-bottom: 30px;
+  
 }

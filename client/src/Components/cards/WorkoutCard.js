@@ -66,8 +66,8 @@ class WorkoutCard extends Component {
             style={{ background: "#24a0ed", marginLeft: 10 }}
             onClick={this.onLikeClick.bind(this, this.props.card._id)}
             >
-              &times;
-              <FaThumbsUp />{ this.props.card.likes } Like
+              &times; &nbsp;
+              <FaThumbsUp /> &nbsp;{ this.props.card.likes } Likes
               
             </Button>
             </div>
