@@ -39,7 +39,8 @@ class AllCardList extends Component {
     if (grabEmail()) {
       //console.log("This is running");
       arrCards = this.props.card.cards;
-      
+      // sort by likes
+      arrCards.sort((a, b) => (a.likes > b.likes) ? -1: 1);
       console.log("The array of cards modified: ");
       console.log(arrCards);
     } else {
