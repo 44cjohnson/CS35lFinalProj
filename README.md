@@ -1,6 +1,6 @@
 # Milestone
 
-A social fitness application for gym rats, weekend warriors, and spring-quarter burnouts. Users can share their workouts, view each other’s posts, and set new PR’s using our built-in stopwatch. This application is our final project submission for our CS35l: Software Construction.
+A social fitness application for gym rats, weekend warriors, and spring-quarter burnouts. Users can share their workouts, view and like each other’s posts, and set new PR’s using our built-in stopwatch. This application is our final project submission for our CS35l: Software Construction.
 
 ## Technologies
 
@@ -43,7 +43,7 @@ npm run dev
 
 - User login and registration
 - Users can upload workouts
-- Users have the ability to see and like other user’s posts, and delete their own posts
+- Users have the ability to see and like other user’s posts sorted by popularity, and delete their own posts
 - A stopwatch to time workout sessions curated by the user
 - Ability to search through other users posts with a search bar
 
