@@ -12,7 +12,7 @@ import {
   Button,
 } from "reactstrap";
 import { connect } from "react-redux";
-import { deleteCard } from "../../actions/cardActions";
+import { deleteCard, incLike, getCards } from "../../actions/cardActions";
 import PropTypes from "prop-types";
 import { grabEmail } from "../../storeAccess/grabEmail";
 
@@ -28,6 +28,13 @@ class WorkoutCard extends Component {
   onDeleteClick = (id) => {
     if (this.isRightEmail(grabEmail())) this.props.deleteCard(id);
   };
+
+  onLikeClick = (id) => {
+    this.props.incLike(id);
+    window.location.reload();
+  };
+//my attempt at a like function
+  
 
   render() {
     return (
@@ -55,8 +62,13 @@ class WorkoutCard extends Component {
             >
               &times; {' '} Delete
             </Button>
-            <Button style={{ background: "#24a0ed", marginLeft: 10 }}>
-              <FaThumbsUp />{ } Like
+            <Button 
+            style={{ background: "#24a0ed", marginLeft: 10 }}
+            onClick={this.onLikeClick.bind(this, this.props.card._id)}
+            >
+              &times;
+              <FaThumbsUp />{ this.props.card.likes } Like
+              
             </Button>
             </div>
           </CardBody>
@@ -71,10 +83,13 @@ class WorkoutCard extends Component {
 
 WorkoutCard.propTypes = {
   deleteCard: PropTypes.func.isRequired,
+  incLike: PropTypes.func.isRequired
 };
 
-const mapStateToProps = (state) => ({});
+const mapStateToProps = (state) => ({
+ // card: state.card,
+});
 
 export default connect(mapStateToProps, {
-  deleteCard,
+  deleteCard, incLike
 })(WorkoutCard);

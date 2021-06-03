@@ -24,8 +24,8 @@ const CardSchema = new Schema({
     type: String,
   },
   likes: {
-    type: [String],
-    default: [],
+    type: Number,
+    default: 0,
   },
 });
 

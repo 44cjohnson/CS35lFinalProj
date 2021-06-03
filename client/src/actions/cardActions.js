@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GET_CARDS, ADD_CARD, DELETE_CARD, CARDS_LOADING } from "./types";
+import { GET_CARDS, ADD_CARD, DELETE_CARD, CARDS_LOADING, INC_LIKE } from "./types";
 //gets token and puts it in header
 import { tokenConfig } from "./authActions";
 import { returnErrors } from "./errorActions";
@@ -33,6 +33,25 @@ export const addCard = (card) => (dispatch, getState) => {
       dispatch(returnErrors(err.response.data, err.response.status))
     );
 };
+
+
+export const incLike = (id) => (dispatch, getState) => {
+  axios
+    .put(`/api/cards/${id}`, tokenConfig(getState))
+    .then((Res) =>
+      dispatch({
+        type: INC_LIKE,
+        payload: id,
+      })
+    )
+    .catch((err) =>
+      dispatch(returnErrors(err.response.data, err.response.status))
+    );
+};
+
+
+
+
 
 export const deleteCard = (id) => (dispatch, getState) => {
   axios

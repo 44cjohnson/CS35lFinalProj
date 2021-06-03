@@ -85,5 +85,5 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, {
-  getCards,
+  getCards, grabEmail
 })(CardList);

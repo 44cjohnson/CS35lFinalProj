@@ -3,6 +3,7 @@ import {
   ADD_CARD,
   DELETE_CARD,
   CARDS_LOADING,
+  INC_LIKE,
 } from "../actions/types";
 
 const initialState = {
@@ -27,6 +28,11 @@ export default function reduce(state = initialState, action) {
       return {
         ...state,
         cards: [action.payload, ...state.cards],
+      };
+    case INC_LIKE:
+      return {
+        ...state,
+        cards: state.cards,
       };
     case CARDS_LOADING:
       return {
