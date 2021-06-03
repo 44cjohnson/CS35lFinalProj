@@ -16,7 +16,7 @@ A social fitness application for gym rats, weekend warriors, and spring-quarter 
 git clone <url>
 ```
 
-2. Install the necessary dependencies locally within each folder: CS35lFinalProj, client, server.
+2. Install the necessary dependencies locally within each folder: CS35lFinalProj, client, and server.
 
 ```bash
 cd <folder>
