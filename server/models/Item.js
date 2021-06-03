@@ -14,6 +14,7 @@ const ItemSchema = new Schema({
   email: {
     type: String,
   },
+	/*
    author: {
     type: String,
     required: true,
@@ -37,7 +38,7 @@ const ItemSchema = new Schema({
 	 type: [String],
      },
 
-
+*/
    });
 
 
