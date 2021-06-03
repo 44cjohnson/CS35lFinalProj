@@ -40,6 +40,20 @@ router.post("/", auth, (req, res) => {
   newCard.save().then((card) => res.json(card));
 });
 
+
+
+router.put("/:id", (req, res) => {
+  //first find the card you want to delete
+  Card.updateOne({ _id: (req.params.id)}, {$inc: { likes: 1}}).then((cards) => res.json(cards));
+    //promise reject if id is not found, catch the error
+    
+});
+
+
+
+
+
+
 // @route DELETE request to api/cards/:id
 // @desc Delete A Card
 // @access Private

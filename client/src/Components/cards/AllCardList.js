@@ -9,7 +9,7 @@ import PropTypes from "prop-types";
 import { grabEmail } from "../../storeAccess/grabEmail";
 import WorkoutCard from "./WorkoutCard";
 
-class CardList extends Component {
+class AllCardList extends Component {
   static propTypes = {
     isAuthenticated: PropTypes.bool,
     user: PropTypes.object.isRequired,
@@ -38,9 +38,9 @@ class CardList extends Component {
     //console.log(this.props.card);
     if (grabEmail()) {
       //console.log("This is running");
-      arrCards = this.props.card.cards.filter(
-        (card) => card.email === grabEmail()
-      );
+      arrCards = this.props.card.cards;
+      // sort by likes
+      arrCards.sort((a, b) => (a.likes > b.likes) ? -1: 1);
       console.log("The array of cards modified: ");
       console.log(arrCards);
     } else {
@@ -73,7 +73,7 @@ class CardList extends Component {
   }
 }
 
-CardList.propTypes = {
+AllCardList.propTypes = {
   getCards: PropTypes.func.isRequired,
   card: PropTypes.object.isRequired,
 };
@@ -86,4 +86,4 @@ const mapStateToProps = (state) => ({
 
 export default connect(mapStateToProps, {
   getCards, grabEmail
-})(CardList);
+})(AllCardList);
