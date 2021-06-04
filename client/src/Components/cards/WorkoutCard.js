@@ -24,7 +24,7 @@ class WorkoutCard extends Component {
   }
 
   isRightEmail = (email) => {
-    if (email) if ((email = email = this.props.card.email)) return true;
+    if (email) if ((email == this.props.card.email)) return true;
   };
 
   onDeleteClick = (id) => {
