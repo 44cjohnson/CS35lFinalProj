@@ -1,4 +1,4 @@
-import image from "../../img/image1.jpg";
+import image from "../../img/image2.jpg";
 
 import "./WorkoutCard.css";
 import { FaThumbsUp } from "react-icons/fa";
