@@ -23,7 +23,7 @@ function Stopwatch() {
   }, [timerOn]);
   return (
     <div className="Stopwatch">
-      <div className="digits" style={{ marginBottom: 20, fontSize: 136 }}>
+      <div className="digits" style={{ color: "#D6D6D7", marginBottom: 20, fontSize: 148 }}>
         <span>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
         <span>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}:</span>
         <span>{("0" + ((time / 10) % 100)).slice(-2)}</span>

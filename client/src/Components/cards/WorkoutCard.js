@@ -40,11 +40,12 @@ class WorkoutCard extends Component {
 
   render() {
     return (
-      <div>
-        <Card>
+      <div >
+        <Card style={{borderRadius: "25px"}}>
           <CardImg
             // top
             width="100%"
+            style={{borderTopLeftRadius: "25px", borderTopRightRadius: "25px"}}
             // src="/assets/318x180.svg"
             src={image}
             alt="Card image cap"
@@ -70,8 +71,8 @@ class WorkoutCard extends Component {
             style={{ background: "#24a0ed", marginLeft: 10 }}
             onClick={this.onLikeClick.bind(this, this.props.card._id)}
             >
-              &times; &nbsp;
-              <FaThumbsUp /> &nbsp;{ this.props.card.likes } Likes
+               &nbsp;
+              <FaThumbsUp /> &nbsp;{ this.props.card.likes }
               
             </Button>
             </div>

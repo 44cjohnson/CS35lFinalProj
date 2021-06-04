@@ -16,6 +16,7 @@ export default function SearchPage() {
       <div className="SearchPage" style={{height: "100vh"}}>
         <div className="App">
           <AppNavbar />
+          <div className="fade-in">
           <div className="font-link3">
             <h1
               className="SearchPageMessage"
@@ -37,13 +38,14 @@ export default function SearchPage() {
                 <div style={{paddingBottom: 0}}>
                   <CardSearchByTitle />
                 </div>
-                <div style={{paddingBottom: 0}}>
+                <div style={{paddingBottom: 40}}>
                   <CardSearchByAuthor />
                 </div>
               </Container>
             </Col>
             <Col xs="2"></Col>
           </Row>
+        </div>
         </div>
       </div>
     </Provider>

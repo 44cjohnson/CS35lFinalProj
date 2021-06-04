@@ -1,3 +1,4 @@
+import "./Logout.css";
 import { GrClose } from "react-icons/gr";
 
 import "./LoginModal.css";
@@ -114,7 +115,7 @@ class LoginModal extends Component {
                   className="mb-3"
                   onChange={this.onChange}
                 ></Input>
-                <Button color="dark" style={{ width:"100%", marginTop: "2rem" }} block>
+                <Button className="font-link3" color="dark" style={{ width:"100%", marginTop: "2rem" }} block>
                   LOGIN
                 </Button>
 

@@ -1,3 +1,5 @@
+import "./Logout.css";
+
 import { RiLogoutBoxRLine } from "react-icons/ri";
 
 import React, { Component, Fragment } from "react";
@@ -17,7 +19,9 @@ export class Logout extends Component {
       
       <Fragment>
         <NavLink onClick={this.props.logout} href="/">
-          <RiLogoutBoxRLine size="1.2em" />
+          <div className="font-link3" style={{color: "black"}}>
+          <RiLogoutBoxRLine color="black" size="1em" />{' '}LOGOUT
+          </div>
         </NavLink>
       </Fragment>
     );

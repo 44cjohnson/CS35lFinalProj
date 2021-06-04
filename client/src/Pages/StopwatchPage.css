@@ -8,7 +8,7 @@
 
 .StopwatchPage {
     text-align: center;
-    background-image: url("../img/background8.jpg");
+    background-image: url("../img/background18.jpg");
 
     /* position: fixed; */
     min-width: 100%;
@@ -25,4 +25,17 @@
 .otherButtons {
     margin-top: 75px;
     /*margin-bottom: -7px;*/
+}
+
+.fade-in {
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

@@ -4,5 +4,7 @@
 
 .digits {
     font-family: 'Orbitron', sans-serif;
+    /* font-style: italic; */
+    font-weight: bold;
 }
 

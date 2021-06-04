@@ -17,10 +17,11 @@ export default function StopwatchPage() {
       <div className="StopwatchPage" style={{height: "100vh"}}>
         <div className="App">
           <AppNavbar />
+          <div className="fade-in">
           <div className="font-link3">
             <h1
               className="StopwatchPageMessage"
-              style={{ color: "black", fontSize: 72 }}
+              style={{ color: "#D6D6D7", fontSize: 72 }}
             >
               STOPWATCH
             </h1>
@@ -32,6 +33,7 @@ export default function StopwatchPage() {
             <ItemModal />
             <ExerciseList />
           </div>
+        </div>
         </div>
       </div>
     </Provider>

@@ -15,6 +15,7 @@ import {
   FaCaretSquareDown,
   FaEdit,
   FaUser,
+  FaUsers,
   FaHome,
   FaGithub,
   FaSearch,
@@ -77,13 +78,13 @@ class AppNavbar extends Component {
     const authLinks = (
       <Fragment>
         <NavItem className="icons">
-          <NavLink href="/MainProfilePage">
-            <FaHome size="1.5em" />
+          <NavLink href="/ProfilePage">
+            <FaUsers size="1.5em" />
           </NavLink>
         </NavItem>
         <NavItem className="icons">
-          <NavLink href="/StopwatchPage">
-            <BsStopwatch size="1.5em" />
+          <NavLink href="/MainProfilePage">
+            <FaUser size="1.2em" />
           </NavLink>
         </NavItem>
         <NavItem className="icons">
@@ -92,8 +93,8 @@ class AppNavbar extends Component {
           </NavLink>
         </NavItem>
         <NavItem className="icons">
-          <NavLink href="/ProfilePage">
-            <FaUser size="1.2em" />
+          <NavLink href="/StopwatchPage">
+            <BsStopwatch size="1.5em" />
           </NavLink>
         </NavItem>
         {/*
@@ -153,7 +154,7 @@ class AppNavbar extends Component {
             <div className="navbarBrand">
               <NavbarBrand
                 className="font-link"
-                href="/MainProfilePage"
+                href="/ProfilePage"
                 style={{ color: "#fffff0", fontSize: 36 }}
               >
                 <FaShoePrints className="logo" size="1em" />

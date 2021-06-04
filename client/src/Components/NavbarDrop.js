@@ -1,4 +1,4 @@
-import { Nav, NavItem, NavLink, Container} from "reactstrap";
+import { Nav, NavItem, NavLink, Container, Row} from "reactstrap";
 import Logout from "./auth/Logout";
 
 import { useState } from "react";
@@ -23,7 +23,8 @@ const NavbarDrop = (props) => {
       <DropdownToggle color="dark">
         <FaCaretDown size="1.5em" />
       </DropdownToggle>
-      <DropdownMenu className="NavbarDrop" >
+      <DropdownMenu className="NavbarDrop">
+        {/*
         <DropdownItem>
             <NavLink  style={{marginLeft: "-5px", color: "black"}} href="/MainProfilePage">
               <FaHome/> Home
@@ -48,14 +49,17 @@ const NavbarDrop = (props) => {
           </NavLink>
         </DropdownItem>
         <DropdownItem divider />
+          */}
         <DropdownItem>
-          <NavLink style={{marginLeft: "-5px", color: "black"}} href="https://github.com/44cjohnson/CS35lFinalProj">
-            <FaGithub /> Github
+          <NavLink style={{ color: "black"}} href="https://github.com/44cjohnson/CS35lFinalProj">
+          <div className="font-link3">
+            <FaGithub />{' '}GITHUB
+            </div>
           </NavLink>
         </DropdownItem>
         <DropdownItem divider />
         <DropdownItem >
-          <Logout/> Logout
+          <Logout/>
         </DropdownItem>
       </DropdownMenu>
     </Dropdown>

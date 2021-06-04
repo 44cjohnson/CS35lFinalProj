@@ -67,6 +67,7 @@ class CardModal extends Component {
       <div className="cardModal">
         <Button
           color="dark"
+          // background="#fffff0"
           size="lg"
           style={{ marginBottom: "2rem" }}
           onClick={this.toggle}
